@@ -14,7 +14,8 @@ class HomePageexp extends StatefulWidget {
 class _HomePageexpState extends State<HomePageexp> {
   @override
   String searchValue = '';
-  final List<String> _suggestions = ['Albania', 'Algeria', 'Andorra' , 'Anguilla' , 'Antigua and Barbuda' , 'Argentina' , 'Armenia' , 'Aruba' , 'Australia' , 'Austria' , 'Azerbaijan' , 'Bahamas' , 'Bahrain' ,'Bangladesh','Barbados','Belarus','Belgium','Belize','Benin','Bermuda','Botswana','Brazil','Bulgaria','Burkina Faso','Burundi','Cambodia','Cameroon','Canada','Chile','China','Colombia','Costa Rica','Croatia','Cuba','Cyprus','Denmark','Dominica','Ecuador','Egypt','El Salvador','Estonia','Ethiopia','Fiji','Finland','France','French Polynesia','Gabon','Gambia','Georgia','Germany','Ghana','Greece','Greenland','Grenada','Guadeloupe','Guatemala','Hungary','Iceland','Indonesia','Iran','Iraq','Ireland','Israel','Italy','Jamaica','Japan','Jordan','Kazakhstan','Kenya','Kuwait','Kyrgyzstan','Latvia','Angola','Bhutan','Comoros','Eritrea','Djibouti','French Guiana','Guinea-Bissau','Haiti','Lebanon'];
+  final List<String> _suggestions = ['Albania', 'Algeria', 'Andorra' , 'Anguilla' , 'Antigua and Barbuda' , 'Argentina' , 'Armenia' , 'Aruba' , 'Australia' , 'Austria' , 'Azerbaijan' , 'Bahamas' , 'Bahrain' ,'Bangladesh','Barbados','Belarus','Belgium','Belize','Benin','Bermuda','Botswana','Brazil','Bulgaria','Burkina Faso','Burundi','Cambodia','Cameroon','Canada','Chile','China','Colombia','Costa Rica','Croatia','Cuba','Cyprus','Denmark','Dominica','Ecuador','Egypt','El Salvador','Estonia','Ethiopia','Fiji','Finland','France','French Polynesia',
+    'Gabon','Gambia','Georgia','Germany','Ghana','Greece','Greenland','Grenada','Guadeloupe','Guatemala','Hungary','Iceland','Indonesia','Iran','Iraq','Ireland','Israel','Italy','Jamaica','Japan','Jordan','Kazakhstan','Kenya','Kuwait','Kyrgyzstan','Latvia','Angola','Bhutan','Comoros','Eritrea','Djibouti','French Guiana','Guinea-Bissau','Haiti','Lebanon'];
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -64,7 +65,8 @@ class _HomePageexpState extends State<HomePageexp> {
                              return
                                Padding(
                                  padding: const EdgeInsets.all(8.0),
-                                 child: Expanded(
+                                 child: SizedBox(
+                                   height: 350,
                                    child: ListView.separated(itemBuilder: (context,index){
 
                                      Map<String,dynamic>usermap = snapshot.data!.docs[index].data() as Map<String,dynamic>;

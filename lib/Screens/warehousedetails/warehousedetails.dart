@@ -138,7 +138,8 @@ SizedBox(
                       return
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Expanded(
+                          child: SizedBox(
+                            height: 350,
                             child: ListView.separated(itemBuilder: (context,index){
 
                               Map<String,dynamic>usermap_ = snapshot.data!.docs[index].data() as Map<String,dynamic>;
@@ -162,7 +163,7 @@ SizedBox(
                                   FirebaseFirestore.instance.collection("Warehouses").doc(usermap['Originaluid']).set(usermap ,SetOptions(
                                       merge: true
                                   ) );
-                                  
+
                                  Navigator.of(context).pushReplacement( MaterialPageRoute(builder: (context)=>HomePageexp()));
                                 },
                                 child: ListTile(
